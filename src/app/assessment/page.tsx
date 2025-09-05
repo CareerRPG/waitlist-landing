@@ -277,8 +277,10 @@ export default function AssessmentPage() {
     )[0];
     
     const foundNeuroclass = neuroclasses.find(nc => nc.id === topNeuroclass);
-    setResult(foundNeuroclass || neuroclasses[0]);
-    setCurrentStep('results');
+    const resultNeuroclass = foundNeuroclass || neuroclasses[0];
+    
+    // Redirect to shareable result page
+    router.push(`/result?neuroclass=${resultNeuroclass.id}`);
   };
 
   const formatTime = (seconds: number) => {
@@ -500,10 +502,12 @@ export default function AssessmentPage() {
                           )}
                         </motion.button>
                         
-                        {/* Option label below button */}
-                        <span className="text-xs text-slate-500 text-center max-w-12 sm:max-w-16 leading-tight">
-                          {option.text.replace('Strongly ', '')}
-                        </span>
+                        {/* Option label below button - one word per row */}
+                        <div className="text-xs text-slate-500 text-center max-w-12 sm:max-w-16 leading-tight">
+                          {option.text.split(' ').map((word, wordIndex) => (
+                            <div key={wordIndex}>{word}</div>
+                          ))}
+                        </div>
                       </motion.div>
                     );
                   })}

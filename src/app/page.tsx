@@ -91,7 +91,7 @@ export default function Home() {
     name: 'CareerRPG',
     alternateName: 'Career RPG',
     url: 'https://careerrpg.app',
-    description: 'Transform your career development into an engaging RPG experience. Discover your neuroclass, unlock achievements, and level up your professional skills.',
+    description: 'Transform your career development into an engaging RPG experience. Discover your neuroclass, start your quest, enter pomodungeon, unlock achievements, and level up your career.',
     publisher: {
       '@type': 'Organization',
       name: 'CareerRPG',
