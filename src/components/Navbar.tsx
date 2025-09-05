@@ -293,7 +293,7 @@ export default function Navbar() {
     onItemClick: (subItem: { id?: string; url?: string; name: string }) => void
   }) => (
     <div 
-      className="hidden md:flex items-center space-x-1"
+      className="hidden lg:flex items-center space-x-1"
       onMouseEnter={onNavAreaEnter}
       onMouseLeave={onNavAreaLeave}
     >
@@ -536,7 +536,7 @@ export default function Navbar() {
               stiffness: 300,
               damping: 30
             }}
-            className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-6xl px-4"
+            className="fixed top-4 left-32 right-32 z-50"
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-2xl border border-slate-200/50 shadow-2xl shadow-slate-900/10">
               <div className="flex items-center justify-between px-6 py-3">
@@ -553,9 +553,20 @@ export default function Navbar() {
                 />
 
                 {/* CTA Button */}
-                <div className="hidden md:block">
+                <div className="hidden lg:block">
                   <CTAButton size="small" />
                 </div>
+
+                {/* Mobile Menu Button for scrolled navbar */}
+                <button
+                  onClick={toggleDock}
+                  className="lg:hidden p-2 text-slate-600 hover:text-emerald-600 transition-colors"
+                >
+                  {isDockExpanded ? 
+                    <X size={24} weight="regular" /> : 
+                    <List size={24} weight="regular" />
+                  }
+                </button>
               </div>
 
 
@@ -582,9 +593,20 @@ export default function Navbar() {
               />
 
               {/* CTA Button */}
-              <div className="hidden md:block">
+              <div className="hidden lg:block">
                 <CTAButton size="default" />
               </div>
+
+              {/* Mobile Menu Button for static navbar */}
+              <button
+                onClick={toggleDock}
+                className="lg:hidden p-2 text-slate-600 hover:text-emerald-600 transition-colors"
+              >
+                {isDockExpanded ? 
+                  <X size={24} weight="regular" /> : 
+                  <List size={24} weight="regular" />
+                }
+              </button>
             </div>
           </div>
         </div>
