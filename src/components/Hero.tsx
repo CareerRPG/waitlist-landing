@@ -17,12 +17,12 @@ export default function Hero() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-80"
+          className="absolute inset-0 w-full h-full object-cover opacity-100"
         >
           <source src="/careerrpgbg.mp4" type="video/mp4" />
         </video>
         {/* Overlay to maintain readability */}
-        <div className="absolute inset-0 bg-gradient-to-b"></div>
+        <div className="absolute inset-0 bg-gradient-to-b opacity-30"></div>
       </div>
 
      
