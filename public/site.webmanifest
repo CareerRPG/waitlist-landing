@@ -1,0 +1,22 @@
+{
+  "name": "CareerRPG - Gamify Your Career Journey",
+  "short_name": "CareerRPG",
+  "description": "Transform your career development into an engaging RPG experience. Discover your neuroclass, unlock achievements, and level up your professional skills.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait"
+}

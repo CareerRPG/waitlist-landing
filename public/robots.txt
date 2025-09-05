@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Block access to admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+
+# Allow access to important pages
+Allow: /about
+Allow: /careers
+Allow: /contact
+Allow: /guide
+Allow: /pricing
+Allow: /roles
+Allow: /neuroclasses
+
+# Sitemap location
+Sitemap: https://careerrpg.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
