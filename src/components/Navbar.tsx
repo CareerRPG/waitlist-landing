@@ -536,10 +536,10 @@ export default function Navbar() {
               stiffness: 300,
               damping: 30
             }}
-            className="fixed top-4 left-32 right-32 z-50"
+            className="fixed top-4 left-4 right-4 md:left-16 md:right-16 lg:left-32 lg:right-32 z-50"
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-2xl border border-slate-200/50 shadow-2xl shadow-slate-900/10">
-              <div className="flex items-center justify-between px-6 py-3">
+              <div className="flex items-center justify-between px-4 sm:px-6 py-3">
                 {/* Logo */}
                 <Logo size="small" onClick={() => scrollToSection('hero')} />
 
@@ -578,7 +578,7 @@ export default function Navbar() {
       {/* Static navbar for initial state (hidden when floating appears) */}
       <nav className={`fixed top-0 left-0 right-0 z-40 transition-opacity duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         <div className="bg-white/70 backdrop-blur-sm border-b border-slate-200/30">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex items-center justify-between py-3">
               {/* Logo */}
               <Logo size="default" onClick={() => scrollToSection('hero')} />
@@ -628,7 +628,7 @@ export default function Navbar() {
                 stiffness: 300,
                 damping: 25
               }}
-              className="fixed bottom-32 left-4 right-4 z-50"
+              className="fixed bottom-32 left-4 right-4 z-50 max-w-sm mx-auto"
               style={{ transformOrigin: 'bottom center' }}
             >
               <div className="bg-white/95 backdrop-blur-xl rounded-3xl border border-slate-200/50 shadow-2xl shadow-slate-900/20 overflow-hidden">
@@ -677,7 +677,7 @@ export default function Navbar() {
 
         {/* Floating Dock Bar */}
         <motion.div
-          className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50"
+          className="fixed bottom-8 left-4 right-4 z-50 flex justify-center"
           initial={{ opacity: 0, y: 100, scale: 0.8 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ 
@@ -689,12 +689,12 @@ export default function Navbar() {
             delay: 0.2 
           }}
         >
-          <div className="bg-white/90 backdrop-blur-xl rounded-full border border-slate-200/50 shadow-2xl shadow-slate-900/20 px-6 py-3">
-            <div className="flex items-center space-x-4">
+          <div className="bg-white/90 backdrop-blur-xl rounded-full border border-slate-200/50 shadow-2xl shadow-slate-900/20 px-3 sm:px-4 py-3 max-w-fit">
+            <div className="flex items-center justify-center space-x-2 sm:space-x-3">
               {/* Left Quick Actions */}
               <motion.button
                 onClick={() => scrollToSection('features')}
-                className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-emerald-100 to-emerald-200 hover:from-emerald-200 hover:to-emerald-300 rounded-full transition-all duration-300"
+                className="flex items-center justify-center w-9 h-9 sm:w-12 sm:h-12 bg-gradient-to-br from-emerald-100 to-emerald-200 hover:from-emerald-200 hover:to-emerald-300 rounded-full transition-all duration-300"
                 initial={{ opacity: 0, scale: 0, x: -20 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{
@@ -711,12 +711,12 @@ export default function Navbar() {
                 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <Lightning size={20} className="text-emerald-600" weight="duotone" />
+                <Lightning size={18} className="text-emerald-600" weight="duotone" />
               </motion.button>
               
               <motion.button
                 onClick={() => scrollToSection('neuroclasses')}
-                className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-100 to-blue-200 hover:from-blue-200 hover:to-blue-300 rounded-full transition-all duration-300"
+                className="flex items-center justify-center w-9 h-9 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-100 to-blue-200 hover:from-blue-200 hover:to-blue-300 rounded-full transition-all duration-300"
                 initial={{ opacity: 0, scale: 0, x: -10 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{
@@ -733,13 +733,13 @@ export default function Navbar() {
                 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <Brain size={20} className="text-blue-600" weight="duotone" />
+                <Brain size={18} className="text-blue-600" weight="duotone" />
               </motion.button>
 
               {/* Center Plus Button */}
-                      <motion.button
+              <motion.button
                 onClick={toggleDock}
-                className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 rounded-full shadow-lg shadow-emerald-500/25 transition-all duration-300"
+                className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 rounded-full shadow-lg shadow-emerald-500/25 transition-all duration-300"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ 
                   opacity: 1, 
@@ -800,7 +800,7 @@ export default function Navbar() {
               {/* Right Quick Actions */}
               <motion.button
                 onClick={() => scrollToSection('community')}
-                className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-100 to-purple-200 hover:from-purple-200 hover:to-purple-300 rounded-full transition-all duration-300"
+                className="flex items-center justify-center w-9 h-9 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-100 to-purple-200 hover:from-purple-200 hover:to-purple-300 rounded-full transition-all duration-300"
                 initial={{ opacity: 0, scale: 0, x: 10 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{
@@ -817,12 +817,12 @@ export default function Navbar() {
                 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <UsersThree size={20} className="text-purple-600" weight="duotone" />
+                <UsersThree size={18} className="text-purple-600" weight="duotone" />
               </motion.button>
               
-                              <motion.button
+              <motion.button
                 onClick={() => handleNavigation('/assessment')}
-                className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-orange-100 to-orange-200 hover:from-orange-200 hover:to-orange-300 rounded-full transition-all duration-300"
+                className="flex items-center justify-center w-9 h-9 sm:w-12 sm:h-12 bg-gradient-to-br from-orange-100 to-orange-200 hover:from-orange-200 hover:to-orange-300 rounded-full transition-all duration-300"
                 initial={{ opacity: 0, scale: 0, x: 20 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{
@@ -839,7 +839,7 @@ export default function Navbar() {
                 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <Target size={20} className="text-orange-600" weight="duotone" />
+                <Target size={18} className="text-orange-600" weight="duotone" />
               </motion.button>
             </div>
           </div>
