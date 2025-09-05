@@ -132,7 +132,7 @@ export const shareToInstagramStory = async (element: HTMLElement): Promise<void>
           });
           return;
         }
-      } catch (shareError) {
+      } catch {
         console.log('Web Share API failed, falling back to download');
       }
     }

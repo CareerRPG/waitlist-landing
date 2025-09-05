@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { 
@@ -14,9 +14,7 @@ import {
   Briefcase,
   Crown,
   Sparkle,
-  Star,
   Share,
-  Download,
   Copy,
   CheckCircle,
   TwitterLogo,
@@ -24,11 +22,10 @@ import {
   FacebookLogo,
   InstagramLogo,
   Image as ImageIcon,
-  DeviceMobile,
   Fire
 } from 'phosphor-react';
 import { ShareableCard } from '../../components/ShareableCard';
-import { shareToInstagramStory, saveToGallery, isMobileDevice } from '../../utils/shareUtils';
+import { shareToInstagramStory, saveToGallery } from '../../utils/shareUtils';
 
 interface IconProps {
   size?: number;
@@ -189,7 +186,7 @@ const neuroclassResults: Record<string, NeuroClassResult> = {
   }
 };
 
-export default function ResultPage() {
+function ResultPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [result, setResult] = useState<NeuroClassResult | null>(null);
@@ -197,7 +194,6 @@ export default function ResultPage() {
   const [copied, setCopied] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
-  const [showImageOptions, setShowImageOptions] = useState(false);
   const instagramCardRef = useRef<HTMLDivElement>(null);
   const squareCardRef = useRef<HTMLDivElement>(null);
 
@@ -247,7 +243,7 @@ export default function ResultPage() {
         break;
       case 'instagram':
         // Show image sharing options instead
-        setShowImageOptions(true);
+        setShowShareOptions(true);
         return;
     }
     
@@ -770,5 +766,20 @@ export default function ResultPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function ResultPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center text-white">
+          <div className="w-16 h-16 border-4 border-white/20 border-t-white rounded-full mx-auto mb-4 animate-spin" />
+          <p className="text-xl">Loading your result...</p>
+        </div>
+      </div>
+    }>
+      <ResultPageContent />
+    </Suspense>
   );
 }
