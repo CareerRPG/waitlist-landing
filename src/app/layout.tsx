@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CareerRPG - Gamify Your Career Journey",
+  title: "CareerRPG",
   description: "Transform your career development into an engaging RPG experience. Discover your neuroclass, unlock achievements, and level up your professional skills.",
   icons: {
     icon: [
