@@ -20,7 +20,7 @@ import {
   FireSimple
 } from 'phosphor-react';
 
-const neuroclasses = [
+const neuroclassData = [
   {
     icon: Lightning,
     codename: 'Lumina',
@@ -127,7 +127,7 @@ const neuroclasses = [
   },
 ];
 
-export default function Neuroclasses() {
+export default function Neuroclass() {
   const [flippedCard, setFlippedCard] = useState<string | null>(null);
   const router = useRouter();
 
@@ -141,7 +141,7 @@ export default function Neuroclasses() {
   };
   
   return (
-    <section id="neuroclasses" className="py-24 bg-gradient-to-b from-slate-50 to-slate-100">
+    <section id="neuroclass" className="py-24 bg-gradient-to-b from-slate-50 to-slate-100">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -151,7 +151,7 @@ export default function Neuroclasses() {
           className="text-center mb-20"
         >
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-slate-100 to-slate-50 border border-slate-200 rounded-full mb-6">
-            <span className="text-slate-600 font-medium text-sm tracking-wide">NEUROCLASSES</span>
+            <span className="text-slate-600 font-medium text-sm tracking-wide">Neuroclass™</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
             The Science Behind
@@ -191,7 +191,7 @@ export default function Neuroclasses() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
-          {neuroclasses.map((item, index) => (
+          {neuroclassData.map((item, index) => (
             <motion.div
               key={item.codename}
               initial={{ opacity: 0, y: 30 }}
@@ -216,9 +216,9 @@ export default function Neuroclasses() {
                   style={{ backfaceVisibility: 'hidden' }}
                 >
                   {/* Role indicator - special styling for assessment card */}
-                  <div className="absolute top-4 right-4 text-xs text-slate-500 font-mono tracking-wider">
+                  {/* <div className="absolute top-4 right-4 text-xs text-slate-500 font-mono tracking-wider">
                       {item.role.toUpperCase()}
-                  </div>
+                  </div> */}
                   
                   <div className="flex items-center mb-4">
                     <div className="mr-3">
@@ -239,7 +239,7 @@ export default function Neuroclasses() {
                     </div>
                   </div>
                   
-                  {/* Only show codename for actual Neuroclasses */}
+                  {/* Only show codename for actual neuroclass */}
                   {item.codename !== 'Assessment' && (
                     <div className="mb-4">
                       <span className="text-xs font-mono text-slate-500 tracking-wider">{item.codename.toUpperCase()}</span>

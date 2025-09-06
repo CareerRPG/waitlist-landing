@@ -25,7 +25,7 @@ const stats = [
   {
     icon: ChatCircle,
     number: '7/7',
-    label: 'Neuroclasses',
+    label: 'neuroclass',
     description: 'All cognitive types represented',
   },
 ];
@@ -90,7 +90,7 @@ export default function Community() {
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-4">Guild System</h3>
             <p className="text-slate-600 font-light leading-relaxed">
-              Form teams with complementary Neuroclasses for enhanced collaboration and shared quest progression.
+              Form teams with complementary neuroclass for enhanced collaboration and shared quest progression.
             </p>
           </motion.div>
 

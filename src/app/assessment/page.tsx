@@ -134,7 +134,7 @@ export default function AssessmentPage() {
     return () => clearInterval(interval);
   }, [currentStep]);
 
-  const neuroclasses: NeuroClass[] = [
+  const neuroclass: NeuroClass[] = [
     {
       id: 'lumina',
       name: 'Lumina',
@@ -276,8 +276,8 @@ export default function AssessmentPage() {
       scores[a[0]] > scores[b[0]] ? a : b
     )[0];
     
-    const foundNeuroclass = neuroclasses.find(nc => nc.id === topNeuroclass);
-    const resultNeuroclass = foundNeuroclass || neuroclasses[0];
+    const foundNeuroclass = neuroclass.find(nc => nc.id === topNeuroclass);
+    const resultNeuroclass = foundNeuroclass || neuroclass[0];
     
     // Redirect to shareable result page
     router.push(`/result?neuroclass=${resultNeuroclass.id}`);
@@ -364,7 +364,7 @@ export default function AssessmentPage() {
                   },
                   {
                     icon: Brain,
-                    title: '7 Neuroclasses',
+                    title: '7 neuroclass',
                     description: 'Unique cognitive archetypes to discover'
                   },
                   {
@@ -684,7 +684,7 @@ export default function AssessmentPage() {
                     Want Your Complete Cognitive Profile?
                   </h3>
                   <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-                    Get a detailed breakdown showing your percentage alignment with all 7 neuroclasses, 
+                    Get a detailed breakdown showing your percentage alignment with all 7 neuroclass, 
                     personalized insights, and career recommendations tailored to your unique cognitive profile.
                   </p>
                   
@@ -720,7 +720,7 @@ export default function AssessmentPage() {
                         {Object.entries(calculatePercentages())
                           .sort(([,a], [,b]) => b - a)
                           .map(([neuroclassId, percentage]) => {
-                            const neuroclassData = neuroclasses.find(nc => nc.id === neuroclassId);
+                            const neuroclassData = neuroclass.find(nc => nc.id === neuroclassId);
                             if (!neuroclassData) return null;
                             
                             return (
@@ -770,7 +770,7 @@ export default function AssessmentPage() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => router.push(`/neuroclasses/${result?.id}`)}
+                    onClick={() => router.push(`/neuroclass/${result?.id}`)}
                     className="bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg transition-all duration-300 flex items-center justify-center"
                   >
                     <BookOpen size={20} className="mr-2" weight="duotone" />
@@ -836,7 +836,7 @@ export default function AssessmentPage() {
                 </h3>
                 
                 <p className="text-slate-600 mb-6">
-                  Get your complete cognitive profile with percentage breakdowns for all 7 neuroclasses, 
+                  Get your complete cognitive profile with percentage breakdowns for all 7 neuroclass, 
                   personalized insights, and career development recommendations.
                 </p>
 

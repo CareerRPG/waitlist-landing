@@ -240,7 +240,7 @@ export default function CompanyCareersPage() {
               className="text-xl text-slate-600 max-w-3xl mx-auto mb-12"
             >
               Join a team of diverse thinkers transforming how people discover their potential and build meaningful careers. 
-              We&apos;re looking for passionate individuals across all Neuroclasses and Roles.
+              We&apos;re looking for passionate individuals across all Neuroclass and Roles.
             </motion.p>
 
             <motion.div 

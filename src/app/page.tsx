@@ -4,13 +4,13 @@ import Hero from '@/components/Hero';
 import Stats from '@/components/Stats';
 import Features from '@/components/Features';
 import Testimonials from '@/components/Testimonials';
-import Neuroclasses from '@/components/Neuroclasses';
 import DevelopmentArcs from '@/components/DevelopmentArcs';
 import GameRoles from '@/components/GameRoles';
 import HowItWorks from '@/components/HowItWorks';
 import ArchetypesOfAmbition from '@/components/ArchetypesOfAmbition';
 import Community from '@/components/Community';
 import Footer from '@/components/Footer';
+import Neuroclass from '@/components/NeuroClass';
 
 export const metadata: Metadata = {
   title: 'CareerRPG - Gamify Your Career Journey | Early Access 2026',
@@ -143,7 +143,7 @@ export default function Home() {
         <Hero />
         <Stats />
         <Features />
-        <Neuroclasses />
+        <Neuroclass/>
         <DevelopmentArcs />
         <GameRoles />
         <HowItWorks />

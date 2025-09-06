@@ -26,7 +26,7 @@ const NavbarPhosphor = () => {
 
   const navItems = [
     { name: 'Features', id: 'features', icon: Lightning },
-    { name: 'Neuroclasses', id: 'neuroclasses', icon: User },
+    { name: 'neuroclass', id: 'neuroclass', icon: User },
     { name: 'How It Works', id: 'how-it-works', icon: BookOpen },
     { name: 'Community', id: 'community', icon: UsersThree },
   ];

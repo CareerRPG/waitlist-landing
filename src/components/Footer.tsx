@@ -63,14 +63,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Neuroclasses */}
+          {/* neuroclass */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-white">Neuroclasses</h3>
+            <h3 className="text-lg font-semibold mb-6 text-white">neuroclass</h3>
             <ul className="space-y-3 text-slate-400">
-              <li><a href="#neuroclasses" className="hover:text-emerald-400 transition-colors">Overview</a></li>
-              <li><a href="/neuroclasses/lumina" className="hover:text-emerald-400 transition-colors">The Visioneer</a></li>
-              <li><a href="/neuroclasses/crimsonix" className="hover:text-emerald-400 transition-colors">The Executor</a></li>
-              <li><a href="/neuroclasses/azura" className="hover:text-emerald-400 transition-colors">The Empath</a></li>
+              <li><a href="#neuroclass" className="hover:text-emerald-400 transition-colors">Overview</a></li>
+              <li><a href="/neuroclass/lumina" className="hover:text-emerald-400 transition-colors">The Visioneer</a></li>
+              <li><a href="/neuroclass/crimsonix" className="hover:text-emerald-400 transition-colors">The Executor</a></li>
+              <li><a href="/neuroclass/azura" className="hover:text-emerald-400 transition-colors">The Empath</a></li>
               <li><a href="/roles" className="hover:text-emerald-400 transition-colors">All Roles</a></li>
             </ul>
           </div>

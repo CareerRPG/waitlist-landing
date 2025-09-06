@@ -32,7 +32,7 @@ export default function HelpPage() {
   const categories = [
     { id: 'all', label: 'All Topics', icon: Book },
     { id: 'getting-started', label: 'Getting Started', icon: Lightbulb },
-    { id: 'neuroclass', label: 'Neuroclasses', icon: Brain },
+    { id: 'neuroclass', label: 'Neuroclass', icon: Brain },
     { id: 'roles', label: 'Roles & Careers', icon: Target },
     { id: 'platform', label: 'Platform Features', icon: Gear },
     { id: 'account', label: 'Account & Billing', icon: Users }
@@ -100,7 +100,7 @@ export default function HelpPage() {
       id: 'assessment-accuracy',
       category: 'neuroclass',
       question: 'How accurate is the CareerRPG assessment?',
-      answer: 'Our assessment is based on validated psychological research and has been tested with thousands of professionals. It\'s designed to capture your dominant cognitive patterns, though remember that people are complex and may exhibit traits from multiple Neuroclasses.'
+      answer: 'Our assessment is based on validated psychological research and has been tested with thousands of professionals. It\'s designed to capture your dominant cognitive patterns, though remember that people are complex and may exhibit traits from multiple neuroclass.'
     },
     {
       id: 'change-role',

@@ -103,7 +103,7 @@ export default function PricingPage() {
   const faq = [
     {
       question: 'What is a Neuroclass and how does it work?',
-      answer: 'A Neuroclass is your unique cognitive archetype - think of it as your professional personality type with RPG flair. Our assessment analyzes your thinking patterns, work preferences, and natural strengths to match you with one of 7 distinct neuroclasses, each with their own superpowers and optimal career paths.'
+      answer: 'A Neuroclass is your unique cognitive archetype - think of it as your professional personality type with RPG flair. Our assessment analyzes your thinking patterns, work preferences, and natural strengths to match you with one of 7 distinct neuroclass, each with their own superpowers and optimal career paths.'
     },
     {
       question: 'Can I switch plans anytime?',

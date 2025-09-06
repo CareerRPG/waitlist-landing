@@ -24,14 +24,14 @@ export interface NeuroClass {
   path: string;
 }
 
-const neuroclasses: NeuroClass[] = [
+const neuroclass: NeuroClass[] = [
   {
     codename: 'lumina',
     title: 'Lumina',
     roleTitle: 'Visioneer',
     color: '#6B7280', // gray-500
     icon: Lightning,
-    path: '/neuroclasses/lumina'
+    path: '/neuroclass/lumina'
   },
   {
     codename: 'crimsonix',
@@ -39,7 +39,7 @@ const neuroclasses: NeuroClass[] = [
     roleTitle: 'Executor',
     color: '#DC2626', // red-600
     icon: Fire,
-    path: '/neuroclasses/crimsonix'
+    path: '/neuroclass/crimsonix'
   },
   {
     codename: 'azura',
@@ -47,7 +47,7 @@ const neuroclasses: NeuroClass[] = [
     roleTitle: 'Empath',
     color: '#2563EB', // blue-600
     icon: Heart,
-    path: '/neuroclasses/azura'
+    path: '/neuroclass/azura'
   },
   {
     codename: 'obsidia',
@@ -55,7 +55,7 @@ const neuroclasses: NeuroClass[] = [
     roleTitle: 'Architect',
     color: '#7C3AED', // violet-600
     icon: Gear,
-    path: '/neuroclasses/obsidia'
+    path: '/neuroclass/obsidia'
   },
   {
     codename: 'solara',
@@ -63,7 +63,7 @@ const neuroclasses: NeuroClass[] = [
     roleTitle: 'Artisan',
     color: '#EA580C', // orange-600
     icon: Palette,
-    path: '/neuroclasses/solara'
+    path: '/neuroclass/solara'
   },
   {
     codename: 'aureus',
@@ -71,7 +71,7 @@ const neuroclasses: NeuroClass[] = [
     roleTitle: 'Seeker',
     color: '#059669', // emerald-600
     icon: MagnifyingGlass,
-    path: '/neuroclasses/aureus'
+    path: '/neuroclass/aureus'
   },
   {
     codename: 'noxion',
@@ -79,7 +79,7 @@ const neuroclasses: NeuroClass[] = [
     roleTitle: 'Challenger',
     color: '#374151', // gray-700
     icon: Shield,
-    path: '/neuroclasses/noxion'
+    path: '/neuroclass/noxion'
   }
 ];
 
@@ -88,9 +88,9 @@ interface NeuroClassNavigationProps {
 }
 
 export default function NeuroClassNavigation({ currentClass }: NeuroClassNavigationProps) {
-  const currentIndex = neuroclasses.findIndex(nc => nc.codename === currentClass);
-  const prevClass = currentIndex > 0 ? neuroclasses[currentIndex - 1] : neuroclasses[neuroclasses.length - 1];
-  const nextClass = currentIndex < neuroclasses.length - 1 ? neuroclasses[currentIndex + 1] : neuroclasses[0];
+  const currentIndex = neuroclass.findIndex(nc => nc.codename === currentClass);
+  const prevClass = currentIndex > 0 ? neuroclass[currentIndex - 1] : neuroclass[neuroclass.length - 1];
+  const nextClass = currentIndex < neuroclass.length - 1 ? neuroclass[currentIndex + 1] : neuroclass[0];
 
   return (
     <div className="fixed inset-y-0 left-0 right-0 pointer-events-none z-50">

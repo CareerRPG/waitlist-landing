@@ -138,7 +138,7 @@ export default function ResearchPage() {
       year: 2023,
       citations: 134,
       impact: 'Very High',
-      abstract: 'While individuals have dominant cognitive styles, the brain\'s plasticity suggests potential for developing capabilities across different Neuroclasses. This study tracks professionals attempting cross-class mastery over 24 months.',
+      abstract: 'While individuals have dominant cognitive styles, the brain\'s plasticity suggests potential for developing capabilities across different neuroclass. This study tracks professionals attempting cross-class mastery over 24 months.',
       keyFindings: [
         '78% of participants successfully developed cross-class skills',
         'Neuroplasticity enables meaningful cognitive adaptation in adults',

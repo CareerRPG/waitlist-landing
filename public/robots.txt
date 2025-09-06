@@ -14,7 +14,7 @@ Allow: /contact
 Allow: /guide
 Allow: /pricing
 Allow: /roles
-Allow: /neuroclasses
+Allow: /neuroclass
 
 # Sitemap location
 Sitemap: https://careerrpg.com/sitemap.xml

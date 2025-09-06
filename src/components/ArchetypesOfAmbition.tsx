@@ -18,7 +18,7 @@ const tiers = [
     title: 'Foundational Growth',
     subtitle: 'Common',
     description: 'Every great career begins with two fundamental drives: the curiosity to learn (The Seeker) and the ability to connect with others (The Empath). These common archetypes are the bedrock of professional growth, representing the essential skills of adaptation and collaboration that fuel every journey.',
-    neuroclasses: [
+    neuroclass: [
       {
         icon: MagnifyingGlass,
         codename: 'AUREUS',
@@ -34,7 +34,7 @@ const tiers = [
         bgColor: 'from-blue-100 to-blue-200'
       }
     ],
-    tierColor: 'from-emerald-500 to-green-600',
+    tierColor: 'from-green-500 to-blue-500',
     level: 'Common'
   },
   {
@@ -42,7 +42,7 @@ const tiers = [
     title: 'Focused Specialization',
     subtitle: 'Uncommon',
     description: 'As you progress, your path begins to specialize. You might focus on driving tangible results and making things happen (The Executor) or on creating unique value and expressing new ideas (The Artisan). These archetypes represent the focused application of your foundational skills into a distinct professional style.',
-    neuroclasses: [
+    neuroclass: [
       {
         icon: FireSimple,
         codename: 'CRIMSONIX',
@@ -58,7 +58,7 @@ const tiers = [
         bgColor: 'from-orange-100 to-orange-200'
       }
     ],
-    tierColor: 'from-blue-500 to-cyan-600',
+    tierColor: 'from-red-500 to-orange-500',
     level: 'Uncommon'
   },
   {
@@ -66,7 +66,7 @@ const tiers = [
     title: 'Systemic Mastery',
     subtitle: 'Rare',
     description: 'A smaller group evolves to work at a higher level of abstraction. They don\'t just work in the system; they design and protect it. They are the ones who build the frameworks (The Architect) or safeguard the mission\'s integrity (The Challenger). This level of systemic thinking and principle-driven leadership is rare and powerful.',
-    neuroclasses: [
+    neuroclass: [
       {
         icon: Gear,
         codename: 'OBSIDIA',
@@ -82,7 +82,7 @@ const tiers = [
         bgColor: 'from-gray-700 to-gray-800'
       }
     ],
-    tierColor: 'from-purple-500 to-indigo-600',
+    tierColor: 'from-purple-600 to-gray-600',
     level: 'Rare'
   },
   {
@@ -90,7 +90,7 @@ const tiers = [
     title: 'Strategic Synthesis',
     subtitle: 'Very Rare',
     description: 'At the very pinnacle are those who can synthesize everything below them into a cohesive, forward-looking direction. The Visioneer is exceptionally rare because this archetype represents the ability to not just see the future, but to architect the path to get there.',
-    neuroclasses: [
+    neuroclass: [
       {
         icon: Lightning,
         codename: 'LUMINA',
@@ -99,7 +99,7 @@ const tiers = [
         bgColor: 'from-gray-100 to-gray-200'
       }
     ],
-    tierColor: 'from-amber-400 to-yellow-500',
+    tierColor: 'from-gray-400 to-slate-500',
     level: 'Very Rare'
   }
 ];
@@ -175,9 +175,9 @@ export default function ArchetypesOfAmbition() {
                         </div>
                       </div>
                       
-                      {/* Neuroclasses in tier */}
+                      {/* neuroclass in tier */}
                       <div className="flex justify-center gap-3">
-                        {tier.neuroclasses.map((neuroclass, index) => (
+                        {tier.neuroclass.map((neuroclass, index) => (
                           <motion.div
                             key={neuroclass.codename}
                             whileHover={{ scale: 1.1 }}
@@ -253,7 +253,7 @@ export default function ArchetypesOfAmbition() {
                 
                 {/* Neuroclass names */}
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {tier.neuroclasses.map((neuroclass) => (
+                  {tier.neuroclass.map((neuroclass) => (
                     <span 
                       key={neuroclass.codename}
                       className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-medium"

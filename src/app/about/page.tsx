@@ -26,53 +26,103 @@ export default function AboutPage() {
 
   const teamMembers = [
     {
-      name: 'Dr. Sarah Chen',
-      role: 'Founder & CEO',
+      name: 'Hafiz Kadir (Fiz)',
+      role: 'Founder, CEO & CTO',
       neuroclass: 'Lumina',
-      roleType: 'Support',
-      bio: 'Neuroscientist turned entrepreneur with 15+ years in cognitive research. Led teams at Google and Microsoft before founding CareerRPG.',
-      specialties: ['Cognitive Psychology', 'Leadership Development', 'Product Strategy']
+      roleType: 'Mage',
+      bio: 'Hafiz Kadir, known as Fiz, is a Computer Science graduate from Malaysia\'s top 2 university with 3+ years of experience across MNC, GLC & SME. With 132 IQ and coding since age 11, blending technical expertise with a deep passion for gaming culture and community building. Fiz\'s philosophy "How you play games is how you do everything" drives his approach to gamifying career growth.',
+      specialties: [
+        {
+          name: 'Gamification & Product Design',
+          description: 'Expert in applying RPG mechanics, quest systems, and progression models to real-world professional growth. A gamer, from Dota Overwatch to Valorant representing his University in Malaysia InterUniversity Grand Finale for Valorant'
+        },
+        {
+          name: 'Ikigai & Brain Color Psychology',
+          description: 'Creator of the CareerRPG Neuroclass™, translating cognitive diversity into character classes for career paths'
+        },
+        {
+          name: 'Software Development',
+          description: 'Skilled in Next.js, Go, and system architecture design, with hands-on product builds from MVP to scale'
+        },
+        {
+          name: 'Community Building',
+          description: 'Proven ability to grow engaged communities (Top 100 MDEC-PRISMA streamer, gaming Discord founder of 250+ community members)'
+        },
+        {
+          name: 'Leadership',
+          description: 'Experienced in agile project management, stakeholder engagement, and mentoring young talent through NexzGen Internship eXperience (NIX)'
+        }
+      ]
     },
     {
-      name: 'Marcus Rodriguez',
-      role: 'Head of Product',
+      name: 'Tengku Haiqal (Tenku)',
+      role: 'Co-Founder & Founding Engineer',
       neuroclass: 'Obsidia',
       roleType: 'Mage',
-      bio: 'Former Principal PM at Amazon with expertise in gamification and user experience. Architect of the CareerRPG platform.',
-      specialties: ['Product Design', 'System Architecture', 'User Research']
+      bio: 'Tengku Haiqal, known as Tenku, is a Game & Interactive Media Design graduate from Widad University College, bringing together his expertise as both a game developer and full-stack engineer. Tenku has hands-on experience in both storytelling and systems design. He is the solo creator of Stigma Birth, a 2D story-based platformer released on the Google Play Store, demonstrating his end-to-end capabilities in game development, design, and publishing.',
+      specialties: [
+        {
+          name: 'Game Development & Design',
+          description: 'Solo creator of Stigma Birth, a 2D story-based platformer on Google Play Store. Expert in end-to-end game development, design, and publishing'
+        },
+        {
+          name: 'Full-Stack Engineering',
+          description: 'Technical execution of CareerRPG MVP, building brain-color onboarding assessment, Pomodoro Battle System, and RPG progression engine'
+        },
+        {
+          name: 'Systems Architecture',
+          description: 'Translates RPG mechanics into scalable systems, ensuring CareerRPG\'s game-inspired features are deeply immersive yet technically robust'
+        },
+        {
+          name: 'Interactive Storytelling',
+          description: 'Combines technical expertise with creative storytelling, bringing game design principles to professional development'
+        },
+        {
+          name: 'Gaming Culture',
+          description: 'Avid gamer and critic with Minecraft and Genshin Impact shaping his creative instincts and passion for interactive worlds'
+        }
+      ]
     },
-    {
-      name: 'Dr. Maya Patel',
-      role: 'Head of Research',
-      neuroclass: 'Aureus',
-      roleType: 'Assassin',
-      bio: 'Research scientist with PhD in Organizational Psychology. Published 50+ papers on cognitive diversity and team performance.',
-      specialties: ['Research Methodology', 'Data Science', 'Organizational Psychology']
-    },
-    {
-      name: 'Jennifer Kim',
-      role: 'Head of Growth',
-      neuroclass: 'Crimsonix',
-      roleType: 'Warrior',
-      bio: 'Growth leader who scaled three startups from 0 to $100M+. Expert in performance marketing and community building.',
-      specialties: ['Growth Strategy', 'Marketing', 'Community Building']
-    },
-    {
-      name: 'Alex Thompson',
-      role: 'Head of Design',
-      neuroclass: 'Solara',
-      roleType: 'Archer',
-      bio: 'Award-winning designer with 12+ years creating delightful user experiences. Previously Design Director at Airbnb.',
-      specialties: ['UX Design', 'Brand Identity', 'Design Systems']
-    },
-    {
-      name: 'Lisa Chang',
-      role: 'Head of People',
-      neuroclass: 'Azura',
-      roleType: 'Healer',
-      bio: 'People operations expert who built high-performance cultures at Netflix and Spotify. Champion of psychological safety.',
-      specialties: ['Culture Development', 'Team Building', 'Leadership Coaching']
-    }
+    // {
+    //   name: 'Marcus Rodriguez',
+    //   role: 'Head of Product',
+    //   neuroclass: 'Obsidia',
+    //   roleType: 'Mage',
+    //   bio: 'Former Principal PM at Amazon with expertise in gamification and user experience. Architect of the CareerRPG platform.',
+    //   specialties: ['Product Design', 'System Architecture', 'User Research']
+    // },
+    // {
+    //   name: 'Dr. Maya Patel',
+    //   role: 'Head of Research',
+    //   neuroclass: 'Aureus',
+    //   roleType: 'Assassin',
+    //   bio: 'Research scientist with PhD in Organizational Psychology. Published 50+ papers on cognitive diversity and team performance.',
+    //   specialties: ['Research Methodology', 'Data Science', 'Organizational Psychology']
+    // },
+    // {
+    //   name: 'Jennifer Kim',
+    //   role: 'Head of Growth',
+    //   neuroclass: 'Crimsonix',
+    //   roleType: 'Warrior',
+    //   bio: 'Growth leader who scaled three startups from 0 to $100M+. Expert in performance marketing and community building.',
+    //   specialties: ['Growth Strategy', 'Marketing', 'Community Building']
+    // },
+    // {
+    //   name: 'Alex Thompson',
+    //   role: 'Head of Design',
+    //   neuroclass: 'Solara',
+    //   roleType: 'Archer',
+    //   bio: 'Award-winning designer with 12+ years creating delightful user experiences. Previously Design Director at Airbnb.',
+    //   specialties: ['UX Design', 'Brand Identity', 'Design Systems']
+    // },
+    // {
+    //   name: 'Lisa Chang',
+    //   role: 'Head of People',
+    //   neuroclass: 'Azura',
+    //   roleType: 'Healer',
+    //   bio: 'People operations expert who built high-performance cultures at Netflix and Spotify. Champion of psychological safety.',
+    //   specialties: ['Culture Development', 'Team Building', 'Leadership Coaching']
+    // }
   ];
 
   const values = [
@@ -89,10 +139,22 @@ export default function AboutPage() {
       color: 'from-emerald-500 to-teal-500'
     },
     {
+      title: 'Gaming Philosophy',
+      description: 'How you play games is how you do everything. Your approach to challenges, strategy, and collaboration in games reflects your professional potential.',
+      icon: Crown,
+      color: 'from-orange-500 to-red-500'
+    },
+    {
       title: 'Science-Backed',
       description: 'Every feature is grounded in research. We combine rigorous science with intuitive design for maximum impact.',
       icon: Target,
       color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Continuous Evolution',
+      description: 'We embrace change and iteration. Like a great game, we constantly improve based on user feedback and emerging insights.',
+      icon: Lightning,
+      color: 'from-yellow-500 to-orange-500'
     },
     {
       title: 'Human-Centered',
@@ -104,31 +166,31 @@ export default function AboutPage() {
 
   const milestones = [
     {
-      year: '2021',
+      year: '2024',
       title: 'Research Foundation',
-      description: 'Dr. Sarah Chen begins research on cognitive diversity in tech teams at Stanford.',
+      description: 'Fiz begins research on cognitive diversity in Malaysia tech teams.',
       icon: Lightbulb
     },
     {
-      year: '2022',
+      year: '2025',
       title: 'Company Founded',
       description: 'CareerRPG incorporated with initial team of 3. First prototype developed.',
       icon: Rocket
     },
     {
-      year: '2023',
+      year: '2025',
       title: 'Beta Launch',
       description: 'Closed beta with 500 users validates core concept. Neuroclass framework refined.',
       icon: Users
     },
     {
-      year: '2024',
+      year: '2026',
       title: 'Public Launch',
-      description: 'Platform opens to public. 10,000+ professionals discover their Neuroclass.',
+      description: 'Platform opens to public. X+ professionals discover their Neuroclass.',
       icon: Star
     },
     {
-      year: '2024+',
+      year: '2026+',
       title: 'Global Expansion',
       description: 'International rollout planned. Enterprise solutions and advanced features coming.',
       icon: Crown
@@ -194,14 +256,14 @@ export default function AboutPage() {
             
             <motion.p 
               variants={itemVariants}
-              className="text-xl text-slate-600 max-w-3xl mx-auto mb-12"
+              className="text-lg text-slate-600 max-w-3xl mx-auto mb-12"
             >
-              We&apos;re building the future of professional development—where understanding your cognitive wiring 
+              We&apos;re building the future of professional development, where understanding your cognitive wiring 
               unlocks your true potential and makes career growth an engaging adventure.
             </motion.p>
 
             {/* Stats */}
-            <motion.div 
+            {/* <motion.div 
               variants={itemVariants}
               className="grid md:grid-cols-4 gap-6 mb-16"
             >
@@ -220,7 +282,7 @@ export default function AboutPage() {
                   <div className="text-sm text-slate-600">{stat.label}</div>
                 </motion.div>
               ))}
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.section>
 
@@ -277,7 +339,7 @@ export default function AboutPage() {
                     generic advice, and outdated approaches that ignore how uniquely our minds work.
                   </p>
                   <p className="text-lg text-slate-600 leading-relaxed">
-                    We believe that understanding your cognitive wiring—your Neuroclass—is the key to 
+                    We believe that understanding your cognitive wiring, your Neuroclass, is the key to 
                     unlocking extraordinary performance. When you know how you think, you can choose 
                     how you grow.
                   </p>
@@ -410,12 +472,13 @@ export default function AboutPage() {
                   <p className="text-slate-600 text-sm mb-4 leading-relaxed">{member.bio}</p>
                   
                   {/* Specialties */}
-                  <div className="space-y-1">
+                  <div className="space-y-3">
                     <h4 className="text-sm font-semibold text-slate-900">Specialties:</h4>
                     {member.specialties.map((specialty, idx) => (
-                      <span key={idx} className="inline-block text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded-md mr-1">
-                        {specialty}
-                      </span>
+                      <div key={idx} className="space-y-1">
+                        <div className="text-xs font-medium text-slate-900">{specialty.name}</div>
+                        <div className="text-xs text-slate-600 leading-relaxed">{specialty.description}</div>
+                      </div>
                     ))}
                   </div>
                 </motion.div>

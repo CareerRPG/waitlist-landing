@@ -34,7 +34,7 @@ export default function BlogPage() {
 
   const featuredPost = {
     title: 'The Future of Work: Why Cognitive Diversity is Your Competitive Advantage',
-    excerpt: 'Discover how understanding your team\'s Neuroclasses can unlock unprecedented levels of performance and innovation in the modern workplace.',
+    excerpt: 'Discover how understanding your team\'s neuroclass can unlock unprecedented levels of performance and innovation in the modern workplace.',
     author: 'Dr. Sarah Chen',
     date: '2024-01-15',
     readTime: '8 min read',
@@ -81,7 +81,7 @@ export default function BlogPage() {
       tags: ['Career Change', 'Adaptation', 'Growth']
     },
     {
-      title: 'The Science Behind Neuroclasses: Understanding Your Cognitive Blueprint',
+      title: 'The Science Behind neuroclass: Understanding Your Cognitive Blueprint',
       excerpt: 'Dive deep into the research and methodology behind our cognitive assessment framework.',
       author: 'Dr. James Wilson',
       date: '2024-01-03',
@@ -158,7 +158,7 @@ export default function BlogPage() {
               variants={itemVariants}
               className="text-xl text-slate-600 max-w-3xl mx-auto mb-12"
             >
-              Discover the latest insights on Neuroclasses, role mastery, and career development. 
+              Discover the latest insights on neuroclass, role mastery, and career development. 
               Transform your professional journey with science-backed strategies and real-world success stories.
             </motion.p>
           </div>

@@ -465,18 +465,18 @@ export default function Navbar() {
       ]
     },
     {
-      name: 'Neuroclasses',
+      name: 'Neuroclass™',
       type: 'dropdown',
       icon: Brain,
       items: [
-        { name: 'Overview', id: 'neuroclasses', icon: Brain, description: 'All cognitive types' },
-        { name: 'The Visioneer', url: '/neuroclasses/lumina', icon: Lightbulb, description: 'Lumina - Dreamer & Innovator' },
-        { name: 'The Executor', url: '/neuroclasses/crimsonix', icon: Lightning, description: 'Crimsonix - Doer & Enforcer' },
-        { name: 'The Empath', url: '/neuroclasses/azura', icon: Heart, description: 'Azura - Healer & Connector' },
-        { name: 'The Architect', url: '/neuroclasses/obsidia', icon: Gear, description: 'Obsidia - Strategist & Optimizer' },
-        { name: 'The Artisan', url: '/neuroclasses/solara', icon: Palette, description: 'Solara - Creator & Expressor' },
-        { name: 'The Seeker', url: '/neuroclasses/aureus', icon: MagnifyingGlass, description: 'Aureus - Explorer & Learner' },
-        { name: 'The Challenger', url: '/neuroclasses/noxion', icon: Shield, description: 'Noxion - Critic & Truth Seeker' },
+        { name: 'Overview', id: 'neuroclass', icon: Brain, description: 'All cognitive types' },
+        { name: 'The Visioneer', url: '/neuroclass/lumina', icon: Lightbulb, description: 'Lumina - Dreamer & Innovator' },
+        { name: 'The Executor', url: '/neuroclass/crimsonix', icon: Lightning, description: 'Crimsonix - Doer & Enforcer' },
+        { name: 'The Empath', url: '/neuroclass/azura', icon: Heart, description: 'Azura - Healer & Connector' },
+        { name: 'The Architect', url: '/neuroclass/obsidia', icon: Gear, description: 'Obsidia - Strategist & Optimizer' },
+        { name: 'The Artisan', url: '/neuroclass/solara', icon: Palette, description: 'Solara - Creator & Expressor' },
+        { name: 'The Seeker', url: '/neuroclass/aureus', icon: MagnifyingGlass, description: 'Aureus - Explorer & Learner' },
+        { name: 'The Challenger', url: '/neuroclass/noxion', icon: Shield, description: 'Noxion - Critic & Truth Seeker' },
       ]
     },
     {
@@ -715,7 +715,7 @@ export default function Navbar() {
               </motion.button>
               
               <motion.button
-                onClick={() => scrollToSection('neuroclasses')}
+                onClick={() => scrollToSection('neuroclass')}
                 className="flex items-center justify-center w-9 h-9 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-100 to-blue-200 hover:from-blue-200 hover:to-blue-300 rounded-full transition-all duration-300"
                 initial={{ opacity: 0, scale: 0, x: -10 }}
                 animate={{ opacity: 1, scale: 1, x: 0 }}

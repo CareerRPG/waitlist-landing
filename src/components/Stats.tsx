@@ -13,7 +13,7 @@ export default function Stats() {
     },
     { 
       number: "7", 
-      label: "Neuroclasses", 
+      label: "neuroclass", 
       subtitle: "Cognitive Archetypes", 
       color: "blue",
       icon: "🎯"
@@ -34,7 +34,7 @@ export default function Stats() {
     }
   ];
 
-  const neuroclasses = [
+  const neuroclass = [
     { 
       name: "Lumina", 
       title: "The Visioneer",
@@ -156,7 +156,7 @@ export default function Stats() {
           </div>
         </motion.div>
 
-        {/* Neuroclasses Section */}
+        {/* neuroclass Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -189,12 +189,12 @@ export default function Stats() {
             </motion.p>
           </div>
 
-          {/* Neuroclasses grid */}
+          {/* neuroclass grid */}
           <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
-            {neuroclasses.map((neuroclass, index) => (
+            {neuroclass.map((neuroclass, index) => (
               <motion.a
                 key={index}
-                href={`/neuroclasses/${neuroclass.name.toLowerCase()}`}
+                href={`/neuroclass/${neuroclass.name.toLowerCase()}`}
                 className={`group relative overflow-hidden block cursor-pointer`}
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
