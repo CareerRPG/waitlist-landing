@@ -35,9 +35,9 @@ export default function ArcherRolePage() {
     bestFor: ['Strategic projects', 'Creative work', 'High-impact tasks', 'Priority focus'],
     neurotypeMatch: ['Permanent Combat Style'],
     examples: ['High-leverage work', 'Creative projects', 'Strategic priorities', 'Impact-focused tasks'],
-    progressionTeaser: 'Evolve into a hunter, Ranger, or Sniper.',
+    progressionTeaser: 'Evolve into a Hunter, Ranger, or Sniper.',
     evolutions: [
-      { name: 'hunter', description: 'Expert at identifying and pursuing the highest-value targets' },
+      { name: 'Hunter', description: 'Expert at identifying and pursuing the highest-value targets' },
       { name: 'Ranger', description: 'Long-range strategist who spots important opportunities from afar' },
       { name: 'Sniper', description: 'Precision specialist who eliminates low-priority tasks with surgical accuracy' }
     ]

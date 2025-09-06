@@ -485,13 +485,13 @@ export default function Navbar() {
       icon: GameController,
       items: [
         { name: 'All Roles', url: '/roles', icon: GameController, description: 'Browse RPG character roles' },
-        { name: 'Support', url: '/roles/support', icon: Lightbulb, description: 'Visionary enablers & strategic guides' },
-        { name: 'Warrior', url: '/roles/warrior', icon: Lightning, description: 'Action-oriented executors & leaders' },
-        { name: 'Healer', url: '/roles/healer', icon: Heart, description: 'Empathetic connectors & harmonizers' },
-        { name: 'Mage', url: '/roles/mage', icon: Gear, description: 'Strategic architects & system builders' },
-        { name: 'Archer', url: '/roles/archer', icon: Palette, description: 'Creative artisans & expressors' },
-        { name: 'Assassin', url: '/roles/assassin', icon: MagnifyingGlass, description: 'Adaptive seekers & learners' },
-        { name: 'Tank', url: '/roles/tank', icon: Shield, description: 'Protective challengers & guardians' },
+        { name: 'Warrior', url: '/roles/warrior', icon: Lightning, description: 'The Master of Momentum - High-energy execution' },
+        { name: 'Mage', url: '/roles/mage', icon: Gear, description: 'The Master of Deep Work - Analytical & systematic' },
+        { name: 'Healer', url: '/roles/healer', icon: Heart, description: 'The Champion of Sustainability - Balanced productivity' },
+        { name: 'Tank', url: '/roles/tank', icon: Shield, description: 'The Guardian of Focus - Distraction defense' },
+        { name: 'Assassin', url: '/roles/assassin', icon: MagnifyingGlass, description: 'The Master of Efficiency - Quick & precise' },
+        { name: 'Archer', url: '/roles/archer', icon: Target, description: 'The Master of Prioritization - High-impact focus' },
+        { name: 'Support', url: '/roles/support', icon: Lightbulb, description: 'The Master of Preparation - Strategic planning' },
       ]
     },
     {

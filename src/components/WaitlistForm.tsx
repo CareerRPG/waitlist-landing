@@ -9,7 +9,7 @@ import { EnvelopeSimple, CheckCircle, CircleNotch } from 'phosphor-react';
 
 const waitlistSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
-  name: z.string().min(2, 'Name must be at least 2 characters'),
+  name: z.string().optional(),
 });
 
 type WaitlistFormData = z.infer<typeof waitlistSchema>;
@@ -17,6 +17,7 @@ type WaitlistFormData = z.infer<typeof waitlistSchema>;
 export default function WaitlistForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const {
     register,
@@ -29,21 +30,30 @@ export default function WaitlistForm() {
 
   const onSubmit = async (data: WaitlistFormData) => {
     setIsLoading(true);
+    setError(null);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // Store in localStorage for demo purposes
-    const waitlistEntries = JSON.parse(localStorage.getItem('waitlist') || '[]');
-    waitlistEntries.push({
-      ...data,
-      timestamp: new Date().toISOString(),
-    });
-    localStorage.setItem('waitlist', JSON.stringify(waitlistEntries));
-    
-    setIsLoading(false);
-    setIsSubmitted(true);
-    reset();
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Failed to join waitlist');
+      }
+
+      setIsSubmitted(true);
+      reset();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (isSubmitted) {
@@ -87,7 +97,23 @@ export default function WaitlistForm() {
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-        
+        {error && (
+          <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-600 text-sm">
+            {error}
+          </div>
+        )}
+
+        <div>
+          <input
+            {...register('name')}
+            type="text"
+            placeholder="Your name"
+            className="w-full px-4 py-3 bg-white/80 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-transparent transition-all"
+          />
+          {errors.name && (
+            <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+          )}
+        </div>
 
         <div>
           <input

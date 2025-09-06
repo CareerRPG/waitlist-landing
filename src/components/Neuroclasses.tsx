@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { 
   Lightbulb, 
   Lightning, 
@@ -128,10 +129,15 @@ const neuroclasses = [
 
 export default function Neuroclasses() {
   const [flippedCard, setFlippedCard] = useState<string | null>(null);
+  const router = useRouter();
 
   const handleCardClick = (codename: string) => {
     if (codename === 'Assessment') return; // Assessment card shouldn't flip
     setFlippedCard(flippedCard === codename ? null : codename);
+  };
+
+  const handleAssessmentClick = () => {
+    router.push('/assessment');
   };
   
   return (
@@ -316,7 +322,10 @@ export default function Neuroclasses() {
               viewport={{ once: false, amount: 0.3 }}
               className="mb-8"
             >
-              <button className="group bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-800 hover:to-slate-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-slate-900/25 hover:-translate-y-1 active:translate-y-0 active:shadow-lg flex items-center justify-center mx-auto">
+              <button 
+                onClick={handleAssessmentClick}
+                className="group bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-800 hover:to-slate-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-slate-900/25 hover:-translate-y-1 active:translate-y-0 active:shadow-lg flex items-center justify-center mx-auto"
+              >
                 <span className="mr-3">Take Neuroclass Assessment Now</span>
                 <Brain size={20} weight="duotone" className="group-hover:scale-110 transition-transform duration-300" />
               </button>

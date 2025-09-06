@@ -120,7 +120,7 @@ export default function GameRoles() {
       abilities: ['Priority Targeting +30%', 'Impact Amplification +25%', 'Creative Flow', 'Laser Focus'],
       pomodoroFocus: 'High-impact tasks, creative work, and strategic priorities',
       examples: ['Strategic projects', 'Creative work', 'High-impact tasks', 'Priority focus'],
-      progressionTeaser: 'Evolve into a hunter, Ranger, or Sniper.'
+      progressionTeaser: 'Evolve into a Hunter, Ranger, or Sniper.'
     },
     {
       id: 'support',

@@ -124,7 +124,7 @@ export default function RolesPage() {
       bestFor: ['Strategic projects', 'Creative work', 'High-impact tasks', 'Priority focus'],
       neurotypeMatch: ['Permanent Combat Style'],
       examples: ['High-leverage work', 'Creative projects', 'Strategic priorities', 'Impact-focused tasks'],
-      progressionTeaser: 'Evolve into a hunter, Ranger, or Sniper.'
+      progressionTeaser: 'Evolve into a Hunter, Ranger, or Sniper.'
     },
     {
       id: 'support',

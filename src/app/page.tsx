@@ -8,6 +8,7 @@ import Neuroclasses from '@/components/Neuroclasses';
 import DevelopmentArcs from '@/components/DevelopmentArcs';
 import GameRoles from '@/components/GameRoles';
 import HowItWorks from '@/components/HowItWorks';
+import ArchetypesOfAmbition from '@/components/ArchetypesOfAmbition';
 import Community from '@/components/Community';
 import Footer from '@/components/Footer';
 
@@ -142,11 +143,12 @@ export default function Home() {
         <Hero />
         <Stats />
         <Features />
-        <Testimonials />
         <Neuroclasses />
         <DevelopmentArcs />
         <GameRoles />
         <HowItWorks />
+        <ArchetypesOfAmbition />
+        <Testimonials />
         <Community />
         <Footer />
       </main>
