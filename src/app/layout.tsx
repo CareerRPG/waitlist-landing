@@ -41,6 +41,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <script defer src="https://umami-production-9d7b.up.railway.app/script.js" data-website-id="1912971e-ade6-4e5c-9be4-35a93b1c648e"></script></head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
